@@ -243,10 +243,10 @@ namespace Hardware.UserControls
                         filtered = filtered.Where(f => f.Serial.ToLower().Contains(filter));
                         break;
                     case "Inventory":
-                        filtered = filtered.Where(f => f.Inventory.ToLower().Contains(filter));
+                        filtered = filtered.Where(f => f.Inventory != null && f.Inventory.ToLower().Contains(filter));
                         break;
                     case "Notes":
-                        filtered = filtered.Where(f => f.Notes.ToLower().Contains(filter));
+                        filtered = filtered.Where(f => f.Notes != null && f.Notes.ToLower().Contains(filter));
                         break;
                 }
             }
